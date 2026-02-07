@@ -1,11 +1,16 @@
+let books = []
 const saveBtn = document.getElementById("saveBtn");
 
 saveBtn.addEventListener("click", () => {
     const book = document.getElementById("bookTitle").value;
-    const chapter = document.getElementById("bookChapter").value;
-    const content = document.getElementById("bookContent").value;
+    const chapter = document.getElementById("chapterTitle").value;
+    const content = document.getElementById("chapterContent").value;
 
-    console.log("Book: ", book);
-    console.log("Chapter: ", chapter);
-    console.log("Content: ", content);
+    books.push({
+        book,
+        chapter,
+        content
+    });
+
+    console.log("Books array: ", books);
 });
