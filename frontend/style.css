@@ -1,6 +1,26 @@
 body {
+    display: grid;
     font-family: Arial, sans-serif;
     background-color: #111;
     color: #eee;
     padding: 40px;
+    margin: auto;
+    width: 900px;
+    min-height: 900px;
+    place-items: center;
+}
+.page{
+    background: white;
+    width: 700px;
+    min-height: 900px;
+    margin: auto;
+    padding: 60px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.saver{
+    display: block;
+    margin: 0 auto;
+    height: 50px;
+    width: 150px;
+    font-size: 15px;
 }
