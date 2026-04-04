@@ -1,22 +1,44 @@
 body {
     display: grid;
     font-family: Arial, sans-serif;
-    background-color: #111;
-    color: #eee;
+    background-color: #ffffff;
+    color: #000000;
     padding: 40px;
     margin: auto;
-    width: 900px;
+    max-width: 900px;
     min-height: 900px;
     place-items: center;
 }
+
+.chapter{
+    display: grid;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 40px;
+    margin: auto;
+    place-items: center;
+    font-size: 30px;
+}
+.chapter.empty::before{
+    content: attr(data-placeholder);
+    color: #aaa;
+}
+
 .page{
     background: white;
     width: 700px;
     min-height: 900px;
     margin: auto;
     padding: 60px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: black;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
+.page.empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+}
+
 .saver{
     display: block;
     margin: 0 auto;
