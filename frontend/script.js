@@ -18,23 +18,32 @@ saveBtn.addEventListener("click", () => {
 const editor = document.getElementById("chapterContent");
 const editor2 = document.getElementById("chapterTitle");
 
-function handleEmpty(element) {
+function handleEditor(element, e) {
+    if (e.type === "keydown") {
+        if (e.key === "Backspace" || e.key === "Delete") {
+            if(element.innerText.trim() === "" || element.innerText.trim() === "\n"){
+                e.preventDefault();
+                element.innerHTML = "";
+            }
+        }
+    }
     if (element.innerText.trim() === "") {
         element.classList.add("empty");
     } else {
         element.classList.remove("empty");
     }
 }
-function handleEnter(element, e) {
-    if (e.key === "Backspace" || e.key === "Delete") {
-        if(element.innerText.trim() === "" || element.innerText.trim() === "\n"){
-            e.preventDefault();
-            element.innerHTML = "";
-        }
-    }
-}
 
-editor.addEventListener("input", () => handleEmpty(editor));
-editor.addEventListener("keydown", (e) => handleEnter(editor, e));
-editor2.addEventListener("input", () => handleEmpty(editor2));
-editor2.addEventListener("keydown", (e) => handleEnter(editor2, e));
+editor.addEventListener("input", (e) => handleEditor(editor));
+editor.addEventListener("keydown", (e) => handleEditor(editor, e));
+editor2.addEventListener("input", (e) => handleEditor(editor2));
+editor2.addEventListener("keydown", (e) => handleEditor(editor2, e));
+
+const sidebar = document.getElementById("sidebar");
+const togglebtn = document.getElementById("togglebtn");
+
+togglebtn.addEventListener("click", () => {
+    sidebar.classList.toggle("open");
+    togglebtn.classList.toggle("open");
+    togglebtn.innerHTML = sidebar.classList.contains("open") ? "&#9664;" : "&#9654;"; 
+});
