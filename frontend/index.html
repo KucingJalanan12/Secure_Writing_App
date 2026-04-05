@@ -6,40 +6,51 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="layout">
-            <div class="sidebar" id="sidebar">
-                <div id="sidebarContent">
-                    <div id="addnewbook">
-                        <label class="label">
-                        Book Title
-                        <br>
-                        <input type="text" id="bookTitle">
-                        </label>
-                        <br>
-                        <button id="addBook" class="adder">Add New Book</button>
-                    </div>
-                    <div id="bookList">
-                        <p></p>
+        <div class="screen active" id="homeScreen">
+            <div class="homeLayout">
+                <h1>My Books</h1>
+                <!---Stuff here-->
+                <div id="addnewbook">
+                    <label class="label">
+                    Book Title
+                    <br>
+                    <input type="text" id="bookTitle">
+                    </label>
+                    <br>
+                    <button id="addBook" class="adder">Add New Book</button>
+                </div>
+                <button id="edittester">editor page</button>
+            </div>
+        </div>
+        <div class="screen" id="editorScreen">
+            <div class="layout">
+                <div class="sidebar" id="sidebar">
+                    <div id="sidebarContent">
+                        <div id="bookList">
+                            <p></p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <button class="toggle-btn" id="togglebtn">&#9654;</button>
-            <div class="main">
-                <h1>Secure Writing App</h1>
+                <button class="toggle-btn" id="togglebtn">&#9654;</button>
+                <div class="main">
+                    <h1>Secure Writing App</h1>
 
-                <br>
+                    <br>
 
-                <div class="chapter empty" contenteditable="plaintext-only" id="chapterTitle" data-placeholder="Chapter 1"></div>
+                    <div class="chapter empty" contenteditable="plaintext-only" id="chapterTitle" data-placeholder="Chapter 1"></div>
 
-                <br><br>
+                    <br><br>
 
-                <div class="page empty" contenteditable="plaintext-only" id="chapterContent" data-placeholder="Start writing here..."></div>   
+                    <div class="page empty" contenteditable="plaintext-only" id="chapterContent" data-placeholder="Start writing here..."></div>   
 
-                <br><br>
+                    <br><br>
 
-                <button id="saveBtn" class="saver">Save Chapter</button>
+                    <button id="saveBtn" class="saver">Save Chapter</button>
 
-                <script src="script.js" defer></script>
+                    <script src="script.js" defer></script>
+
+                    <button id="hometester">home page</button>
+                </div>
             </div>
         </div>
     </body>

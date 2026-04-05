@@ -64,3 +64,15 @@ addBookBtn.addEventListener("click", () => {
 
     document.getElementById("bookTitle").value === "";
 })
+
+function switchScreen(screenID) {
+    document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+
+    document.getElementById(screenID).classList.toggle("active");
+}
+
+const EditorBtn = document.getElementById("edittester");
+const HomeBtn = document.getElementById("hometester");
+
+EditorBtn.addEventListener("click", () => switchScreen("editorScreen"));
+HomeBtn.addEventListener("click", () => switchScreen("homeScreen"));
