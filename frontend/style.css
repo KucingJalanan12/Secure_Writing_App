@@ -26,6 +26,7 @@ body {
 .sidebar.open {
     width: 200px;
     padding: 20px;
+    justify-content: center;
 }
 
 .toggle-btn {

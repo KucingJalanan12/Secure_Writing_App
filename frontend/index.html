@@ -9,20 +9,25 @@
         <div class="layout">
             <div class="sidebar" id="sidebar">
                 <div id="sidebarContent">
-                    <!--Sidebar content-->
+                    <div id="addnewbook">
+                        <label class="label">
+                        Book Title
+                        <br>
+                        <input type="text" id="bookTitle">
+                        </label>
+                        <br>
+                        <button id="addBook" class="adder">Add New Book</button>
+                    </div>
+                    <div id="bookList">
+                        <p></p>
+                    </div>
                 </div>
             </div>
             <button class="toggle-btn" id="togglebtn">&#9654;</button>
             <div class="main">
                 <h1>Secure Writing App</h1>
 
-                <label class="label">
-                Book Title
                 <br>
-                <input type="text" id="bookTitle">
-                </label>
-
-                <br><br>
 
                 <div class="chapter empty" contenteditable="plaintext-only" id="chapterTitle" data-placeholder="Chapter 1"></div>
 

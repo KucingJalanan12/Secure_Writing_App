@@ -47,3 +47,20 @@ togglebtn.addEventListener("click", () => {
     togglebtn.classList.toggle("open");
     togglebtn.innerHTML = sidebar.classList.contains("open") ? "&#9664;" : "&#9654;"; 
 });
+
+const addBookBtn = document.getElementById("addBook");
+const bookListDiv = document.getElementById("bookList");
+
+addBookBtn.addEventListener("click", () => {
+    const title = document.getElementById("bookTitle").value.trim();
+
+    if (title === "") return;
+
+    books.push({title, chapters: []});
+
+    const bookItem = document.createElement("p");
+    bookItem.innerHTML = title;
+    bookListDiv.appendChild(bookItem);
+
+    document.getElementById("bookTitle").value === "";
+})
