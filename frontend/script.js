@@ -34,9 +34,9 @@ function handleEditor(element, e) {
     }
 }
 
-editor.addEventListener("input", (e) => handleEditor(editor));
+editor.addEventListener("input", (e) => handleEditor(editor, e));
 editor.addEventListener("keydown", (e) => handleEditor(editor, e));
-editor2.addEventListener("input", (e) => handleEditor(editor2));
+editor2.addEventListener("input", (e) => handleEditor(editor2, e));
 editor2.addEventListener("keydown", (e) => handleEditor(editor2, e));
 
 const sidebar = document.getElementById("sidebar");

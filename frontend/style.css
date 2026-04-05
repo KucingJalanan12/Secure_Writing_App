@@ -29,7 +29,7 @@ body {
 }
 
 .toggle-btn {
-    position: sticky;
+    position: fixed;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
@@ -55,31 +55,40 @@ body {
     align-items: center;
 }
 
-.chapter{
+.chapter {
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #000000;
     padding: 20px;
-    margin: auto;
     font-size: 30px;
+    width: 700px;
+    margin: auto;
+    text-align: center;
 }
-.chapter.empty::before{
+.chapter.empty::before {
     content: attr(data-placeholder);
     color: #aaa;
+    pointer-events: none;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
+.page.empty::before {
+    content: attr(data-placeholder);
+    color: #aaa;
+    pointer-events: none;
+    position: absolute;
 }
 
 .page{
-    background: white;
+    background: rgb(250, 250, 246);
     width: 700px;
     min-height: 500px;
     padding: 60px;
     color: black;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
+    box-shadow: 0 0 3px rgb(0, 0, 0);
     box-sizing: border-box;
-}
-.page.empty::before {
-    content: attr(data-placeholder);
-    color: #aaa;
 }
 
 .saver{
@@ -88,4 +97,8 @@ body {
     height: 50px;
     width: 150px;
     font-size: 15px;
+}
+
+[contenteditable] {
+    outline: none;
 }
