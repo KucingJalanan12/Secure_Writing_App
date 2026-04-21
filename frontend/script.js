@@ -62,7 +62,7 @@ addBookBtn.addEventListener("click", () => {
     bookItem.innerHTML = title;
     bookListDiv.appendChild(bookItem);
 
-    document.getElementById("bookTitle").value === "";
+    document.getElementById("bookTitle").value = "";
 })
 
 function switchScreen(screenID) {
